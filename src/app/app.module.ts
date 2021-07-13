@@ -3,16 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './include/header/header.component';
+import { AlbumListComponent } from './components/album-list/album-list.component';
+import { CreateAlbumComponent } from './components/create-album/create-album.component';
+import { AlbumService } from './services/albums-list-service';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    AlbumListComponent,
+    CreateAlbumComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AlbumService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

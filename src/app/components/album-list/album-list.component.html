@@ -1,0 +1,22 @@
+
+<div class="row container-fluid justify-content-center mt-5">
+    <div class="col-md-6">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>User Id</th>
+                <th>Id</th>
+                <th>Title</th>
+              </tr>
+            </thead>
+            <tbody>
+             <tr *ngFor="let item of albumsList">
+                 <td>{{item.userId}}</td>
+                 <td>{{item.id}}</td>
+                 <td>{{item.title}}</td>
+             </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+
