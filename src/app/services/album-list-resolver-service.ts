@@ -11,7 +11,7 @@ import { AlbumService } from "./albums-list-service";
 
 export class AlbumResolverService implements Resolve <AlbumList[]>{
     constructor(private albums: AlbumService) { }
-        
+        // resolve
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<AlbumList[]> {
         return this.albums.getAlbumList().pipe(
             catchError(err =>{
